@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
-import { LoginUser } from '../services/serviceAuth'
-import { ButtonLogin } from '../componentes/buttons/botones';
-import { InputLogin } from '../componentes/inputs/inputs';
+import { LoginUser } from '../../services/serviceAuth'
+import { ButtonLogin } from '../../componentes/buttons/botones';
+import { InputLogin } from '../../componentes/inputs/inputs';
 import {Link} from 'react-router-dom';
 export default function Login({setRole}) {
     const [ formData, setFormData] = useState({
@@ -30,8 +30,8 @@ export default function Login({setRole}) {
           <div className='mx-auto  mt-4 pt-2 w-75'>
             <h4 className="mb-2 text-font text-start">¡Bienvenido nuevamente!</h4>
             <p className="text-font text-start mb-3">Ingresa tu usuario y contraseña </p>
-            <InputLogin  onChange={changeInputs} placeholder="Usuario" />
-            <InputLogin onChange={changeInputs} placeholder="Contraseña" type="password" />
+            <InputLogin  onChange={changeInputs} name="nombreUsuario" placeholder="Usuario" />
+            <InputLogin onChange={changeInputs} name="contrasena" placeholder="Contraseña" type="password" />
             <Link className='d-flex justify-content-end link-color mb-4'>¿Olvidaste tu contraseña?</Link>
             <ButtonLogin onClick={handleSave} text="Ingresar"/>
             <p className='text-center mt-3 text-font'>O</p>
@@ -39,7 +39,6 @@ export default function Login({setRole}) {
             <Link className='login-logos-box  text-font '><img src="/google.svg" alt="google"className='login-logos me-2 ' /> Google</Link>
             <Link className=' login-logos-box text-font'  ><img src="/facebook.svg" alt="google" className='login-logos me-2 ' />Facebook</Link>
             <Link className=' login-logos-box text-font  ' ><img src="/mac.svg" alt="google" className='login-logos me-2 ' />Apple</Link>
-
             </div>
             <p className='text-center mt-4 text-font'>No tiene una cuenta? <Link className='link-color'>Registrate</Link></p>
           </div>

@@ -1,5 +1,5 @@
 import React,{ useEffect, useState} from 'react';
-import { getUsuarios } from '../services/serviceAuth';
+import { getUsuarios } from '../../services/serviceAuth';
 export default function Usuarios() {
     const [usuarios, setUsuarios] = useState([]);
 

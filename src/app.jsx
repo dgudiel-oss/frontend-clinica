@@ -1,14 +1,14 @@
 import React, { useState,useEffect } from "react";
 import { Routes, Route} from 'react-router-dom'
-import { administrador, empleado } from "./config/menu/menu";
-import  Login  from "./pagina/login";
-import { Menu } from "../src/config/navbar/navbar"
+import { administrador, asistente } from "./componentes/menu/menu";
+import  Login  from "./paginas/login/login";
+import { Menu } from "./componentes/navbar/navbar"
 export default function App (){
     const [role, setRole] = useState(()=>{
         const role = localStorage.getItem('roleId');
         return role ? Number(role) : null;
     });
-  const roles = role === 1 ? administrador : role === 2 ? empleado : null;
+  const roles = role === 1 ? administrador : role === 2 ? asistente : null;
 
     useEffect(()=>{
         if(role !== null){
