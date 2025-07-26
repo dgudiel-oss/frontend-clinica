@@ -11,6 +11,8 @@ export default function Login({setRole}) {
     })
     const handleSave = async ()=>{
       const result =await LoginUser(formData)
+      localStorage.setItem('usuario', JSON.stringify(result.nombreUsuario))
+      localStorage.setItem('rol', JSON.stringify(result.roleId))
       setRole(result.roleId)
       console.log(result)
     }

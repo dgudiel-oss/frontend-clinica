@@ -1,7 +1,8 @@
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink,NavbarToggler, Collapse } from 'reactstrap';
-import { Link } from 'react-router-dom'
+import { NavLink as RRLink} from 'react-router-dom'
 import { administrador, asistente } from '../menu/menu'
 import React, { useState } from 'react';
+import  UserInfo  from '../user/userInfo';
 
 export const Menu =({role})=>{
     const roles = role === 1 ? administrador : role === 2 ? asistente : null
@@ -10,16 +11,22 @@ export const Menu =({role})=>{
 
     return (
     <div>
-      <Navbar light expand="md">
-        <NavbarBrand href="/" className='ms-3'>Medical Clinic</NavbarBrand>
+      <Navbar expand="md">
+        <NavbarBrand href="/" className='ms-1 me-4 pe-4'>Medical Clinic</NavbarBrand>
+         <Nav className='ms-auto d-md-none'>
+            <UserInfo />
+          </Nav>
         <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar className=' justify-content-center pe-4'>
-          <Nav className="d-flex gap-md-4 pe-4" navbar>
+        <Collapse isOpen={isOpen} navbar className='mt-3 '>
+          <Nav className="ms-auto bg-btn-navbar d-flex align-items-center gap-4 " navbar>
             {roles.map((role)=>(
             <NavItem key={role.path}>
-              <NavLink tag={Link} to={role.path}>{role.title}</NavLink>
+              <RRLink to={role.path}className={({ isActive }) => isActive ? 'bg-btn-active' : 'btg-bnt-inactive'}>{role.title}</RRLink>
             </NavItem>
             ))}
+          </Nav>
+          <Nav className='d-none d-md-flex ms-auto me-3 align-items-center'>
+            <UserInfo />
           </Nav>
         </Collapse>
       </Navbar>

@@ -5,17 +5,12 @@ import  Login  from "./paginas/login/login";
 import { Menu } from "./componentes/navbar/navbar"
 export default function App (){
     const [role, setRole] = useState(()=>{
-        const role = localStorage.getItem('roleId');
+        const role = localStorage.getItem('rol');
         return role ? Number(role) : null;
     });
   const roles = role === 1 ? administrador : role === 2 ? asistente : null;
 
-    useEffect(()=>{
-        if(role !== null){
-        localStorage.setItem('roleId', role);
-        }
-    },[role])
-
+   
 
     return(
         <>
