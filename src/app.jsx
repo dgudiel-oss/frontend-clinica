@@ -10,8 +10,6 @@ export default function App (){
     });
   const roles = role === 1 ? administrador : role === 2 ? asistente : null;
 
-   
-
     return(
         <>
         {roles ? (

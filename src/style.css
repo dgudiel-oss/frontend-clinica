@@ -102,17 +102,7 @@ min-width: 200px;
   color : #949496;
 }
 
-.navbar-user{
-  color: #ffffffe7;
-  background-color: #efefef;
-  border-radius: 15px;
-  text-align: center;
-  max-width: 200px;
-  min-width: 170px;
-  min-height: 20px;
-  font-family:  "Helvetica Neue";
-  font-size: 14px;
-  padding: 0px 39px;
-  display: block;
+.userinfo{
+  background-color: #fdfdfd;
 }
 
