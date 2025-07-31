@@ -1,6 +1,6 @@
 
 body{
-  background-color: #f6f6f6;
+  background-color: #f2f3f7;
 }
 .login-container {
   min-height: 92vh;
@@ -75,7 +75,7 @@ min-width: 200px;
     justify-content: center;
     align-items: center;
 }
-
+/* navbar */
 .bg-btn-navbar{
   background-color: #efefef;
   height: 24px;
@@ -99,10 +99,114 @@ min-width: 200px;
 }
 
 .btg-bnt-inactive {
-  color : #949496;
+  color : #000;
 }
 
 .userinfo{
   background-color: #fdfdfd;
 }
+/* carousel */
+.button-carousel {
+  background-color: #fdfdfd;
+  color: #000000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
 
+.carousel-container {
+  display: flex;
+  position: relative;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE/Edge */
+  flex-grow: 1;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.carousel-card {
+  flex: 0 0 auto;
+  min-width: 230px;
+}
+
+.card-carousel{
+  max-width: 230px;
+  min-width: 200px;
+}
+
+.button-card{
+  text-align: center;
+  text-decoration: none;
+  width: 100px;
+  max-height: 30px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #ffffffe7;
+}
+
+/* table */
+.container-table{
+  max-height: 250px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.table-container{
+  align-items: center;
+  background-color: #fdfdfd !important;
+   border-radius: 16px !important;
+  padding: 1.2rem;
+    padding-left: 4rem;
+        padding-right: 3rem; 
+}
+
+
+.table-modern th {
+  width: "140px";
+  text-align: left;
+  color: #f5a315 !important;
+}
+
+.table-modern td {
+  vertical-align: left;
+  font-size: 14px;
+}
+
+.container-table{
+  max-width: 650px;
+}
+/* card paciente */
+.card-cuerpo{
+  color: #f5a315;
+  font-size: 24px;
+}
+.card-container{
+  background-color: #fdfdfd;
+}
+
+/* grafico de barra */
+.barchar-container{
+  background-color: #fdfdfd !important;
+   border-radius: 16px !important;
+  padding: 1rem;
+}
+
+.button-receta{
+  border: none;
+  background-color: #102542;
+  max-width: 100px;
+  max-height: 30px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #ffffffe7;
+}
+
+
+ 

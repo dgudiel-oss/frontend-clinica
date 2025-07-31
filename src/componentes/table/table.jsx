@@ -1,0 +1,36 @@
+import React from "react";
+import { Table } from "reactstrap";
+
+export const TableComponent = ({ data, headers, renderAction}) => {
+
+    return (
+        <div className="table-container">
+        <Table responsive borderless hover className="table-modern" >
+            <thead>
+                <tr>
+                    {headers.map((header, index)=>(
+                        <th  key={index}>{header}</th>
+                    ))}
+                        {renderAction && <th style={{ width: "120px"}} className="text-center">Acciones</th>}
+
+                </tr>
+            </thead>
+             <tbody>
+                    {data.map((item, index)=>(
+                        <tr key={index}>
+                            {headers.map((header, index)=>(
+                                <td key={index}>{item[header]}</td>
+                            ))}
+                            {renderAction && (
+                                <td style={{ width: "100px", whiteSpace: "nowrap" }} className="text-center ">
+                                   {renderAction(item, index)}
+                                </td>
+                            )}
+                        </tr>
+                    ))}
+                </tbody>
+        </Table>
+        </div>
+    )
+    
+}

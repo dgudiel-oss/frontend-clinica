@@ -32,7 +32,7 @@ export default function UserInfo ({setRole}){
     return (
          <div className="d-flex pe-3">
       <Dropdown isOpen={dropdownOpen} toggle={toggle} direction="start">
-        <DropdownToggle className="userinfo border-0 rounded-5 "><User color="black" /></DropdownToggle>
+        <DropdownToggle className="userinfo border-0 rounded-5 me-4"><User color="black" /></DropdownToggle>
         <DropdownMenu >
           <DropdownItem header>Usuario</DropdownItem>
           <DropdownItem disabled className="d-flex flex-column">

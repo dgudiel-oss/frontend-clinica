@@ -12,7 +12,7 @@ export const Menu =({role, setRole})=>{
     return (
     <div>
       <Navbar expand="md">
-        <NavbarBrand href="/" className='ms-1 me-4 pe-4'>Medical Clinic</NavbarBrand>
+        <NavbarBrand className='d-flex pe-3 ps-3 bg-white ms-3 mt-2 border rounded-5 '>Medical Clinic</NavbarBrand>
          <Nav className='ms-auto d-md-none'>
             <UserInfo setRole={setRole} />
           </Nav>
