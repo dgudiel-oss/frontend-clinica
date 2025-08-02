@@ -12,15 +12,12 @@ import {
 // Registrar componentes necesarios
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
-const BarChart = () => {
-  const labels = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'];
+const BarChart = ({labels}) => {
 
   // Estado para el día seleccionado
 
   // Datos simulados
-  const dataValues = [5, 7, 3, 8, 4, 6, 2];
-
-
+  const dataValues = [5, 7, 3, 8, 4, 6, 2,4,5,6,7];
 
 
   const data = {
