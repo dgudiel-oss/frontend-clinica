@@ -21,7 +21,7 @@ export const Menu =({role, setRole})=>{
           <Nav className="ms-auto bg-btn-navbar d-flex align-items-center gap-4 " navbar>
             {roles.map((role)=>(
             <NavItem key={role.path}>
-              <RRLink to={role.path}className={({ isActive }) => isActive ? 'bg-btn-active' : 'btg-bnt-inactive'}>{role.title}</RRLink>
+              <RRLink to={role.path}className={({ isActive }) => isActive ? 'bg-btn-active' : 'btg-bnt-inactive'}>{role.icon}{role.title}</RRLink>
             </NavItem>
             ))}
           </Nav>

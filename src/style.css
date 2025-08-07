@@ -83,7 +83,7 @@ min-width: 200px;
 }
 .bg-btn-active,
 .btg-bnt-inactive {
-  width: 90px; 
+  width: 100px; 
   text-decoration: none;
   border-radius: 10px;
   font-family: "Helvetica Neue";
@@ -189,6 +189,8 @@ min-width: 200px;
 
 /* grafico de barra */
 .barchar-container{
+  display: flex;
+  align-items: center;
   background-color: #fdfdfd !important;
    border-radius: 16px !important;
   padding: 1rem;
@@ -218,11 +220,143 @@ min-width: 200px;
 }
 
 .input-search{
-  margin-top: 10px;
+  margin-top: 5px;
   max-height: 30px;
   border: 1px solid #102542;
   border-radius: 20px;
   padding-left: 10px;
   font-size: 14px;
   color: #ffffffe7;
+}
+
+/* calendario */
+.calendar-container{
+  background-color: #fdfdfd !important;
+  border-radius: 16px !important;
+  padding: 0.8rem;
+}
+.left-panel {
+  padding: 0.7rem;
+  background-color: #fdfdfd;
+  border-radius: 16px;
+  max-height: 485px;
+  overflow-y: auto;
+
+}
+.left-panel::-webkit-scrollbar {
+  width: 0.2px; /* 👈 Ancho del scroll */
+}
+.cita-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;;
+}
+
+.hora {
+  font-size: 0.85rem;
+  color: #475569;
+  margin-bottom: 0.3rem;
+  display: inline;
+}
+
+.circle { 
+  width: 10px;     /* diámetro del círculo */
+  height: 10px;
+  background-color: #102542; /* color del círculo (tomate) */
+  border-radius: 50%;  
+   display: inline-block;     
+              
+}
+
+.rbc-toolbar {
+  display: none;
+}
+
+.select-calendar{
+  width: 80px;
+  text-transform: capitalize;
+  background-color: #102542;
+  color: #ffffffe7;
+  border-radius: 16px;
+  font-size: 13px;
+  height: 32px;
+  text-align: center;  
+  line-height: 1.2;
+  
+}
+
+
+.rbc-month-view .rbc-date-cell {
+  font-size: 13px; /* Tamaño de los números */
+  color: #333;
+}
+
+.rbc-event {
+  font-size: 12px;
+  margin-left: 2px;
+  margin-bottom: 3px;
+  width: 115px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #efefef;
+  color: #000000;
+  text-align: center;
+  border-radius: 16px;
+}
+.rbc-selected {
+  background-color: #102542 !important; /* igual que el normal */
+  color: #ffffffe7;
+}
+
+.rbc-show-more {
+  color: #102542; 
+  margin-left: 2px;
+  background-color: #efefef;
+  border-radius: 16px;
+  font-size: 12px;
+ width: 115px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;  
+  text-align: center;
+  cursor: pointer;  
+}
+
+@media (max-width: 767.98px) {
+  .rbc-event {
+    font-size: 0; /* Oculta texto */
+    width: 8px;
+    height: 8px;
+    background-color: #102542;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-left: 20px;
+    }
+   .rbc-show-more {
+    font-size: 0; /* Oculta texto */
+    
+  }
+}
+
+.pagination-btn {
+  margin-top: 22px;
+  text-align: center;  
+  width: 25px;                
+  height: 25px;               
+  line-height: 20px;
+  font-size: 13px;
+  padding: 0px;  
+  background-color: transparent !important;
+  border: none !important;
+  color: #000 !important; 
+ 
+}
+
+.pagination-btn.active,
+.pagination .page-item.active .page-link {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-radius: 9px;
 }

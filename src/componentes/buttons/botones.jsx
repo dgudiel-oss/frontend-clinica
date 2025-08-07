@@ -1,6 +1,5 @@
 import React from 'react'
 import { Button } from 'reactstrap';
-import { ClipboardPen, CirclePlus } from 'lucide-react';
 export const ButtonLogin = ({onClick, text})=>{
 
     return (
@@ -8,18 +7,21 @@ export const ButtonLogin = ({onClick, text})=>{
         onClick={onClick}>{text}</Button>
     )
 }
-export const ButtonReceta = ({onClick})=>{
-
-    return (
-        <Button className="button d-flex align-items-center justify-content-center " 
-        onClick={onClick}> <ClipboardPen className='pe-1' color="#f5a315" strokeWidth={1}/>Receta</Button>
-    )
-}   
-
-export const ButtonAdd = ({onClick, text})=>{
+   
+export const ButtonIconText = ({onClick, text, icon})=>{
 
     return (
         <Button className="button d-flex align-items-center justify-content-center" 
-        onClick={onClick}><CirclePlus size={30} className='pe-1' color="#f5a315" strokeWidth={1.5} />{text}</Button>
+        onClick={onClick}>{icon}{text}</Button>
     )
 }
+
+
+export const ButtonIcon= ({onClick,icon})=>{
+    return(
+    <Button onClick={onClick} className='bg-transparent border-0 rounded-4 d-flex align-items-center justify-content-center'>
+    {icon}
+    </Button>
+    )
+}
+

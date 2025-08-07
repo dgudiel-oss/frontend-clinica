@@ -3,8 +3,8 @@ import { CardCarouselPaciente } from "../../componentes/card/cardCarouselpacient
 import { CardNumberPaciente } from "../../componentes/card/cardnumberpacient";
 import  BarChart  from "../../componentes/chart/barchart";
 import { TableComponent } from "../../componentes/table/table";
-import { ButtonReceta } from "../../componentes/buttons/botones";
-import { ClipboardCheck, CalendarDays, User } from 'lucide-react';
+import { ButtonIconText  } from "../../componentes/buttons/botones";
+import { ClipboardCheck, CalendarDays, User, ClipboardPen } from 'lucide-react';
 import { Button } from "reactstrap";
 export default function Dashboard(){
 const usersName = [
@@ -35,7 +35,7 @@ const day = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"]
           <div className="d-flex flex-wrap justify-content-between w-100">
         <div className="d-flex flex-column align-items-center col-md-5 col-12 mb-3">
        <div className="d-flex w-100">
-        <ButtonReceta/>
+        <ButtonIconText icon={ <ClipboardPen className='pe-1' color="#f5a315" strokeWidth={1}/>} text="Receta" />
        </div>
       <div className="d-flex w-100  gap-4 pt-3">
         <CardNumberPaciente icon={<User className="mb-2" size={24} color="#102542" strokeWidth={1} />} 
@@ -51,6 +51,7 @@ const day = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"]
     <div className="d-flex flex-column align-items-center col-md-7 col-12 ">
        <div className=" container-table mb-2 mb-md-0 w-100 ">
          <TableComponent
+         totalitems={2}
          height={"200px"}
           data={usersName}
           headers={["Nombre", "Telefono", "Pendiente"]}
